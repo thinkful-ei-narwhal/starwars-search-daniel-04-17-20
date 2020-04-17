@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './Item.css';
 
-export default class OpenItem extends Component {
+export default class Item extends Component {
   render() {
     return (
       <div className="item">
