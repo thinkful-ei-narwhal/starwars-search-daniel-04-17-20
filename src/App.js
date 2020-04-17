@@ -6,6 +6,7 @@ import NotFound from './components/NotFound/NotFound';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import UserContext from './UserContext.js';
 import SearchPage from './components/SearchPage/SearchPage';
+import './App.css';
 
 export default class App extends Component {
 

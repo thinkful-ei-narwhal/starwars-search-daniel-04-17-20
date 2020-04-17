@@ -1,0 +1,52 @@
+#search-form {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: space-between;
+  border: 1px solid white;
+  border-radius: 20px;
+  width: 75%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+input, select, label {
+  margin: 7px;
+  padding: 7px;
+}
+
+button {
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: yellow;
+  color: #343434;
+  
+}
+
+button:disabled {
+  margin: 10px;
+  background-color: #343434;
+  font-style: italic;
+  color: grey;
+  border: 1px solid rgb(68, 68, 68);
+}
+
+input {
+  color: white;
+  background-color:#343434;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+select {
+  background-color: #343434;
+  color: white;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UserContext from '../../UserContext';
+import './SearchBarNav.css';
 
 export default class SearchBarNav extends Component {
 

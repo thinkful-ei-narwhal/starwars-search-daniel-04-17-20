@@ -13,7 +13,7 @@ export default class SearchPage extends Component {
      } = this.context;
 
     return (
-      <div>
+      <div className="search-page">
         <SearchBarNav history={this.props.history}/>
         {loading ? "LOOKING IN A GALAXY FAR, FAR AWAY. . .": ''}
         <ResultsList />
