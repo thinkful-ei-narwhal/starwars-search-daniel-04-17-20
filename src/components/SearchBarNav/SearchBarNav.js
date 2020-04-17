@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import UserContext from '../../UserContext';
+import PropTypes from 'prop-types';
 import './SearchBarNav.css';
 
 export default class SearchBarNav extends Component {
@@ -42,7 +43,8 @@ export default class SearchBarNav extends Component {
             validateTextInput() ||
             validateParameter()
             }
-            onClick={() => {
+            onClick={(e) => {
+            e.preventDefault()
             this.props.history.push(`/Results/`)
             onGetSearch()}}>Submit</button>
         </form>
@@ -51,3 +53,7 @@ export default class SearchBarNav extends Component {
     )
   }
 }
+
+SearchBarNav.propTypes = {
+  history: PropTypes.object
+};

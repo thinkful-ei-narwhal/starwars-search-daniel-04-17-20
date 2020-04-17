@@ -6,3 +6,10 @@
   justify-content: space-around;
   align-content: center;
 }
+
+.no-results {
+  font-style: italic;
+  color: goldenrod;
+  font-size: 40px;
+  text-align: center;
+}

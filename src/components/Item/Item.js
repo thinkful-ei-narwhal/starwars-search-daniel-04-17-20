@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Item.css';
 
 export default class OpenItem extends Component {
@@ -10,3 +11,8 @@ export default class OpenItem extends Component {
     )
   }
 }
+
+Item.propTypes = {
+  name: PropTypes.string,
+  title: PropTypes.string,
+};

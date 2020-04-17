@@ -39,6 +39,15 @@ button:disabled {
   border: 1px solid rgb(68, 68, 68);
 }
 
+button:disabled:hover {
+  background-color: #343434;
+}
+
+button:hover {
+  transition: 0.5s;
+  background-color: goldenrod;
+}
+
 input {
   color: white;
   background-color:#343434;

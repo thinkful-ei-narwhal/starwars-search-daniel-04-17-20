@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Item from '../Item/Item';
 import UserContext from '../../UserContext';
+import './ResultsList.css';
 
 export default class ResultsList extends Component {
 
@@ -12,14 +13,9 @@ export default class ResultsList extends Component {
       results,
      } = this.context;
 
-    const resultsList = results.map(item => {
+    
 
-      return (
-        <Item 
-        name={item.name}
-        title={item.title}/>
-      )
-    })
+    let resultsList = results.length > 0 ? results.map(item => {return (<Item name={item.name} title={item.title}/>)}) : <p className="no-results">There were no results, please try again!</p>
 
     return (
       <div className="results">
