@@ -15,7 +15,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <SearchBarNav history={this.props.history}/>
-        {loading ? "LOADING. . . .": ''}
+        {loading ? "LOOKING IN A GALAXY FAR, FAR AWAY. . .": ''}
       </div>
     )
   }
