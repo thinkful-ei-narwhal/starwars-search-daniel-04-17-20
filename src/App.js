@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import {Route, Switch, Link} from 'react-router-dom';
 import HomePage from './components/HomePage/HomePage';
-import SearchList from './components/SearchList/SearchList';
 import Item from './components/Item/Item';
 import NotFound from './components/NotFound/NotFound';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import UserContext from './UserContext.js';
+import SearchPage from './components/SearchPage/SearchPage';
 
 export default class App extends Component {
 
@@ -69,7 +69,7 @@ export default class App extends Component {
             component={HomePage} 
             />
           <Route exact path='/Results/:param' 
-            component={SearchList}
+            component={SearchPage}
             />
           <Route exact path='/Expanded/:item' 
             component={Item}
