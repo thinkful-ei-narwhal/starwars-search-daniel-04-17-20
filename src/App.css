@@ -14,3 +14,8 @@ a {
                 -1px -1px 0 white;
   text-decoration: none;
 }
+
+a:hover {
+  transition: 0.5s;
+  color: goldenrod;
+}

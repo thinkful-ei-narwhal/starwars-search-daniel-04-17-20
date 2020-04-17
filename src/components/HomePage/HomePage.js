@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserContext from '../../UserContext';
 import SearchBarNav from '../SearchBarNav/SearchBarNav';
+import './HomePage.css';
 
 export default class HomePage extends Component {
 
@@ -15,7 +16,7 @@ export default class HomePage extends Component {
     return (
       <div>
         <SearchBarNav history={this.props.history}/>
-        {loading ? "LOOKING IN A GALAXY FAR, FAR AWAY. . .": ''}
+        <p className="loading">{loading ? "LOOKING IN A GALAXY FAR, FAR AWAY. . .": ''}</p>
       </div>
     )
   }

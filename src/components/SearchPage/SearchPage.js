@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import UserContext from '../../UserContext';
 import ResultsList from '../ResultsList/ResultsList';
 import SearchBarNav from '../SearchBarNav/SearchBarNav';
+import './SearchPage.css';
 
 export default class SearchPage extends Component {
   static contextType = UserContext;
@@ -15,7 +16,7 @@ export default class SearchPage extends Component {
     return (
       <div className="search-page">
         <SearchBarNav history={this.props.history}/>
-        {loading ? "LOOKING IN A GALAXY FAR, FAR AWAY. . .": ''}
+        <p className="loading">{loading ? "LOOKING IN A GALAXY FAR, FAR AWAY. . .": ''}</p>
         <ResultsList />
       </div>
     )

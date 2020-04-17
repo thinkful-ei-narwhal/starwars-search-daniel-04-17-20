@@ -22,7 +22,7 @@ export default class ResultsList extends Component {
     })
 
     return (
-      <div className="results-list">
+      <div className="results">
         {resultsList}
       </div>
     )
