@@ -15,14 +15,25 @@ export default class App extends Component {
     results: [],
     textInput: {value: '', touched: false},
     parameterSelect: {value: '', touched: false},
+    loading: false,
   }
 
   // API Function(s) On Submit
 
   onGetSearch = () => {
 
-    // yo yo get those values, make an api fetch!
-    // put the results in results yo
+    const URL = "https://swapi-thinkful.herokuapp.com/api/";
+
+    this.setState({loading: true});
+
+    fetch(`${URL}${this.state.parameterSelect.value}/?search=${this.state.textInput.value}`)
+      
+      .then(res => res.json())
+      .then(data => this.setState(
+        {
+          results : data.results,
+          loading: false,
+      }))
   }
 
 
@@ -32,8 +43,8 @@ export default class App extends Component {
     this.setState({textInput: {value: textInput, touched: true}});
   };
 
-  setSearchParam = searchParam => {
-    this.setState({searchParam: {value: searchParam, touched: true}});
+  setSearchParam = parameterSelect => {
+    this.setState({parameterSelect: {value: parameterSelect, touched: true}});
   };
 
   // Validator Functions
@@ -50,15 +61,23 @@ export default class App extends Component {
     }
   }
 
+  validateParameter = () => {
+    if (this.state.parameterSelect.value === '') {
+      return 'Please choose a parameter!';
+    }
+  }
+
   render() {
     return (
       <UserContext.Provider value = {{
+        loading: this.state.loading,
         results: this.state.results,
         textInput: this.state.textInput,
         parameterSelect: this.state.parameterSelect,
         setSearchParam: this.setSearchParam,
         setTextInput: this.setTextInput,
         validateTextInput: this.validateTextInput,
+        validateParameter: this.validateParameter,
         onGetSearch: this.onGetSearch,
       }}>
       <div>
@@ -68,7 +87,7 @@ export default class App extends Component {
           <Route exact path='/' 
             component={HomePage} 
             />
-          <Route exact path='/Results/:param' 
+          <Route exact path='/Results/' 
             component={SearchPage}
             />
           <Route exact path='/Expanded/:item' 

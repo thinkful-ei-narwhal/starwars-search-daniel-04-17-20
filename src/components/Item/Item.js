@@ -5,7 +5,7 @@ export default class OpenItem extends Component {
   render() {
     return (
       <div>
-       <p>test</p> 
+       <p>{this.props.name}{this.props.title}</p> 
       </div>
     )
   }
